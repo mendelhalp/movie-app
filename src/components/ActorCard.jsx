@@ -10,7 +10,7 @@ const ActorCard = (props) => {
                 <a href={imdbLink} target="_blank">
                     <Card.Img variant="top" src={imgSrc} />
                 </a>
-                <Card.Body>
+                <Card.Body className="p-2">
                     <Card.Title className="text-center">{fname + " " + lname + " " + age}</Card.Title>
                 </Card.Body>
             </Card>
