@@ -1,3 +1,12 @@
 div.card{
     box-shadow: 1px 1px 9px -5px #000;
+
+}
+div.card a{
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+}
+    
+div.card a:hover{
+    color: rgb(173, 173, 173);
 }
