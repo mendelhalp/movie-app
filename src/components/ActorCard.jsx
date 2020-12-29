@@ -1,22 +1,18 @@
 import { Card } from 'react-bootstrap';
 import './ActorCard.css';
 
-const ActorCard = (props) => {
-    const { fname, lname, age, imgSrc, imdbLink } = props;
+const ActorCard = ({actor}) => 
 
-    return (
         <div className="c-actor-card">
             <Card>
-                <a href={imdbLink} target="_blank">
-                    <Card.Img variant="top" src={imgSrc} />
-                </a>
+                <Card.Img variant="top" src={actor.img} />
                 <Card.Body className="p-2">
-                    <Card.Title className="text-center">{fname + " " + lname + " " + age}</Card.Title>
+                <a href={actor.link} target="_blank">
+                    <Card.Title className="text-center">{actor.fname + " " + actor.lname + " " + actor.age()}</Card.Title>
+                </a>
                 </Card.Body>
             </Card>
         </div>
-    )
-}
 
 
 

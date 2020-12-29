@@ -2,6 +2,7 @@ import './ActorsPage.css';
 import Actor from '../model/ActorModel';
 import ActorCard from '../components/ActorCard';
 import { Col, Container, Row } from 'react-bootstrap';
+import { useState } from 'react';
 
 
 let actorsArr = [];
@@ -14,17 +15,31 @@ actorsArr.push(new Actor("Janet", "Brandt", "1914-12-13", "https://m.media-amazo
 console.log(actorsArr);
 
 const ActorsPage = () => {
+    const [actors, setActors] = useState(actorsArr);
+    const [filter, setFilter] = useState();
+    const [sortBy, setSortBy] = useState("lname");
 
     const cardColumns = actorsArr.map(actor =>
 
         <Col xs={12} md={6} lg={3}>
-            <ActorCard fname={actor.fname} lname={actor.lname} age={actor.age()} imgSrc={actor.img} imdbLink={actor.link} />
+            <ActorCard actor={actor} />
         </Col>
     );
 
     return (
         <div className="p-actor">
             <Container>
+                <row>
+                    <Col md={4}>
+                        <label htmlFor="" className="mr-1">Sort by</label>
+                        <select value={sortBy} onCange={e => {setSortBy(e.target.value)}}>
+                            <option value="lname">Last Name</option>
+                            <option value="fname">First Name</option>
+                            <option value="age">Age</option>
+                        </select>
+                    </Col>
+                    <Col md={{ span: 4, offset: 4 }}>{`md={{ span: 4, offset: 4 }}`}</Col>
+                </row>
                 <Row>
                     {cardColumns}
                 </Row>
