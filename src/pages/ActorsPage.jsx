@@ -13,14 +13,43 @@ actorsArr.push(new Actor("Suzy", "Delair", "1917-12-31", "https://m.media-amazon
 actorsArr.push(new Actor("Janet", "Brandt", "1914-12-13", "https://m.media-amazon.com/images/M/MV5BZGJkOWQyY2MtOGQ4Mi00MjY0LTkwM2EtNWMwMTEzYzg4YTFkXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_UY317_CR9,0,214,317_AL_.jpg", "https://www.imdb.com/name/nm0104935/?ref_=tt_cl_t6"));
 
 const ActorsPage = () => {
-    const [actors, setActors] = useState(actorsArr);
+    const [actors, setActors] = useState(actorsArr.sort((a1, a2) => (a1.lname < a2.lname) ? -1 : (a1.lname > a2.lname) ? 1 : 0));
     const [filter, setFilter] = useState('');
     const [sortBy, setSortBy] = useState("lname");
 
-    const cardColumns = actors.map(actor => {
+    const sortActors = (e) => {
+
+        setSortBy(e.target.value)
+
+        setActors(actors.slice(0)
+            .sort((actor1, actor2) => {
+                if (e.target.value === 'lname') {
+                    if (actor1.lname < actor2.lname) {
+                        return -1
+                    } else if (actor1.lname > actor2.lname) {
+                        return 1
+                    } else {
+                        return 0
+                    };
+                } else if (e.target.value === 'fname') {
+                    if (actor1.fname < actor2.fname) {
+                        return -1
+                    } else if (actor1.fname > actor2.fname) {
+                        return 1
+                    } else {
+                        return 0
+                    };
+                } else if (e.target.value === 'age') {
+                    return actor2.age() - actor1.age();
+                }
+            }));
+    };
+
+
+    const cardColumns = actors.map((actor, index) => {
         if (actor.lname.includes(filter) || actor.fname.includes(filter)) {
             return (
-                <Col xs={12} md={6} lg={3}>
+                <Col key={index} xs={12} md={6} lg={3}>
                     <ActorCard actor={actor} />
                 </Col>
             )
@@ -34,7 +63,7 @@ const ActorsPage = () => {
                 <Row>
                     <Col xs={12} md="auto">
                         <label htmlFor="sort-type-select" className="mr-1">Sort by:</label>
-                        <select id="sort-type-select" value={sortBy} onChange={e => { setSortBy(e.target.value) }} className="mb-3">
+                        <select id="sort-type-select" value={sortBy} onChange={sortActors} className="mb-3">
                             <option value="lname">Last Name</option>
                             <option value="fname">First Name</option>
                             <option value="age">Age</option>
