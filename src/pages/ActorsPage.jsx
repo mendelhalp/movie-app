@@ -12,11 +12,9 @@ actorsArr.push(new Actor("Louis", "de Funès", "1914-07-31", "https://m.media-am
 actorsArr.push(new Actor("Suzy", "Delair", "1917-12-31", "https://m.media-amazon.com/images/M/MV5BMTQ0MjgwMjEyMV5BMl5BanBnXkFtZTgwMjExNDc3NTE@._V1_UY317_CR132,0,214,317_AL_.jpg", "https://www.imdb.com/name/nm0216177/?ref_=tt_cl_t2"));
 actorsArr.push(new Actor("Janet", "Brandt", "1914-12-13", "https://m.media-amazon.com/images/M/MV5BZGJkOWQyY2MtOGQ4Mi00MjY0LTkwM2EtNWMwMTEzYzg4YTFkXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_UY317_CR9,0,214,317_AL_.jpg", "https://www.imdb.com/name/nm0104935/?ref_=tt_cl_t6"));
 
-console.log(actorsArr);
-
 const ActorsPage = () => {
     const [actors, setActors] = useState(actorsArr);
-    const [filter, setFilter] = useState();
+    const [filter, setFilter] = useState("");
     const [sortBy, setSortBy] = useState("lname");
 
     const cardColumns = actorsArr.map(actor =>
@@ -26,19 +24,30 @@ const ActorsPage = () => {
         </Col>
     );
 
+    const sortActors = (e) => {
+        setSortBy(e.target.value);
+    }
+
+    const filterActors = (e) => {
+        setFilter(e.target.value);
+    }
+
     return (
         <div className="p-actor">
             <Container>
                 <row>
                     <Col md={4}>
-                        <label htmlFor="" className="mr-1">Sort by</label>
-                        <select value={sortBy} onCange={e => {setSortBy(e.target.value)}}>
+                        <label htmlFor="sort-type-select" className="mr-1">Sort by</label>
+                        <select id="sort-type-select" value={sortBy} onCange={sortActors}>
                             <option value="lname">Last Name</option>
                             <option value="fname">First Name</option>
                             <option value="age">Age</option>
                         </select>
                     </Col>
-                    <Col md={{ span: 4, offset: 4 }}>{`md={{ span: 4, offset: 4 }}`}</Col>
+                    <Col md={{ span: 4, offset: 4 }}>
+                        <label htmlFor="filter-text">Filter Actors</label>
+                        <input id="filter-text" type="text" value={filter} onCange={filterActors}></input>
+                    </Col>
                 </row>
                 <Row>
                     {cardColumns}
