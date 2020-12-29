@@ -3,7 +3,7 @@ import './ActorCard.css';
 
 const ActorCard = ({actor}) => 
 
-        <div className="c-actor-card">
+        <div className="c-actor-card mb-4">
             <Card>
                 <Card.Img variant="top" src={actor.img} />
                 <Card.Body className="p-2">

@@ -35,20 +35,21 @@ const ActorsPage = () => {
     return (
         <div className="p-actor">
             <Container>
-                <row>
-                    <Col md={4}>
-                        <label htmlFor="sort-type-select" className="mr-1">Sort by</label>
-                        <select id="sort-type-select" value={sortBy} onCange={sortActors}>
+                <h1 className="text-center my-3">Actors Gallery</h1>
+                <Row>
+                    <Col xs={12} md="auto">
+                        <label htmlFor="sort-type-select" className="mr-1">Sort by:</label>
+                        <select id="sort-type-select" value={sortBy} onCange={sortActors} className="mb-3">
                             <option value="lname">Last Name</option>
                             <option value="fname">First Name</option>
                             <option value="age">Age</option>
                         </select>
                     </Col>
-                    <Col md={{ span: 4, offset: 4 }}>
-                        <label htmlFor="filter-text">Filter Actors</label>
+                    <Col xs={12} md="auto">
+                        <label htmlFor="filter-text" className="mr-1 mb-3">Filter:</label>
                         <input id="filter-text" type="text" value={filter} onCange={filterActors}></input>
                     </Col>
-                </row>
+                </Row>
                 <Row>
                     {cardColumns}
                 </Row>
