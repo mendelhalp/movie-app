@@ -66,7 +66,7 @@ const ActorsPage = () => {
                         <select id="sort-type-select" value={sortBy} onChange={sortActors} className="mb-3">
                             <option value="lname">Last Name</option>
                             <option value="fname">First Name</option>
-                            <option value="age">Age</option>
+                            <option value="age">Age (z-a)</option>
                         </select>
                     </Col>
                     <Col xs={12} md="auto">
