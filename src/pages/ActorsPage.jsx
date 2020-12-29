@@ -35,7 +35,7 @@ const ActorsPage = () => {
     return (
         <div className="p-actor">
             <Container>
-                <h1 className="text-center my-3">Actors Gallery</h1>
+                <h1 className="text-center my-5">Actors Gallery</h1>
                 <Row>
                     <Col xs={12} md="auto">
                         <label htmlFor="sort-type-select" className="mr-1">Sort by:</label>
