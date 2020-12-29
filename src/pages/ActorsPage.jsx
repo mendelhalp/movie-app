@@ -14,15 +14,18 @@ actorsArr.push(new Actor("Janet", "Brandt", "1914-12-13", "https://m.media-amazo
 
 const ActorsPage = () => {
     const [actors, setActors] = useState(actorsArr);
-    const [filter, setFilter] = useState("");
+    const [filter, setFilter] = useState('');
     const [sortBy, setSortBy] = useState("lname");
 
-    const cardColumns = actorsArr.map(actor =>
-
-        <Col xs={12} md={6} lg={3}>
-            <ActorCard actor={actor} />
-        </Col>
-    );
+    const cardColumns = actors.map(actor => {
+        if (actor.lname.includes(filter) || actor.fname.includes(filter)) {
+            return (
+                <Col xs={12} md={6} lg={3}>
+                    <ActorCard actor={actor} />
+                </Col>
+            )
+        }
+    });
 
     return (
         <div className="p-actor">
@@ -31,7 +34,7 @@ const ActorsPage = () => {
                 <Row>
                     <Col xs={12} md="auto">
                         <label htmlFor="sort-type-select" className="mr-1">Sort by:</label>
-                        <select id="sort-type-select" value={sortBy} onChange={e => {setSortBy(e.target.value)}} className="mb-3">
+                        <select id="sort-type-select" value={sortBy} onChange={e => { setSortBy(e.target.value) }} className="mb-3">
                             <option value="lname">Last Name</option>
                             <option value="fname">First Name</option>
                             <option value="age">Age</option>
@@ -39,7 +42,7 @@ const ActorsPage = () => {
                     </Col>
                     <Col xs={12} md="auto">
                         <label htmlFor="filter-text" className="mr-1 mb-3">Filter:</label>
-                        <input id="filter-text" type="text" value={filter} onChange={e => {setFilter(e.target.value)}}></input>
+                        <input id="filter-text" type="text" value={filter} onChange={e => { setFilter(e.target.value) }}></input>
                     </Col>
                 </Row>
                 <Row>
