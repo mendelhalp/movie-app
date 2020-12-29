@@ -24,14 +24,6 @@ const ActorsPage = () => {
         </Col>
     );
 
-    const sortActors = (e) => {
-        setSortBy(e.target.value);
-    }
-
-    const filterActors = (e) => {
-        setFilter(e.target.value);
-    }
-
     return (
         <div className="p-actor">
             <Container>
@@ -39,7 +31,7 @@ const ActorsPage = () => {
                 <Row>
                     <Col xs={12} md="auto">
                         <label htmlFor="sort-type-select" className="mr-1">Sort by:</label>
-                        <select id="sort-type-select" value={sortBy} onChange={sortActors} className="mb-3">
+                        <select id="sort-type-select" value={sortBy} onChange={e => {setSortBy(e.target.value)}} className="mb-3">
                             <option value="lname">Last Name</option>
                             <option value="fname">First Name</option>
                             <option value="age">Age</option>
@@ -47,7 +39,7 @@ const ActorsPage = () => {
                     </Col>
                     <Col xs={12} md="auto">
                         <label htmlFor="filter-text" className="mr-1 mb-3">Filter:</label>
-                        <input id="filter-text" type="text" value={filter} onChange={filterActors}></input>
+                        <input id="filter-text" type="text" value={filter} onChange={e => {setFilter(e.target.value)}}></input>
                     </Col>
                 </Row>
                 <Row>
