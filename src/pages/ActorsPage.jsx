@@ -22,48 +22,43 @@ actorsArr.push(new Actor("Linda", "Hunt", "1945-04-02", "https://m.media-amazon.
 
 const ActorsPage = () => {
     const [actors, setActors] = useState(actorsArr.sort((a1, a2) =>
-                                (a1.lname.toLowerCase() < a2.lname.toLowerCase()) ? -1 : (a1.lname.toLowerCase() > a2.lname.toLowerCase()) ? 1 : 0));
+        (a1.lname.toLowerCase() < a2.lname.toLowerCase()) ? -1 : (a1.lname.toLowerCase() > a2.lname.toLowerCase()) ? 1 : 0));
     const [filter, setFilter] = useState('');
     const [sortBy, setSortBy] = useState("lname");
 
-    const sortActors = (e) => {
+    const filterdActors = actors.filter(actor =>
+        actor.lname.toLowerCase().includes(filter.toLowerCase()) || actor.fname.toLowerCase().includes(filter.toLowerCase()))
 
-        setSortBy(e.target.value)
-
-        setActors(actors.slice(0)
-            .sort((actor1, actor2) => {
-                if (e.target.value === 'lname') {
-                    if (actor1.lname.toLowerCase() < actor2.lname.toLowerCase()) {
-                        return -1
-                    } else if (actor1.lname.toLowerCase() > actor2.lname.toLowerCase()) {
-                        return 1
-                    } else {
-                        return 0
-                    };
-                } else if (e.target.value === 'fname') {
-                    if (actor1.fname < actor2.fname) {
-                        return -1
-                    } else if (actor1.fname > actor2.fname) {
-                        return 1
-                    } else {
-                        return 0
-                    };
-                } else if (e.target.value === 'age') {
-                    return actor2.age() - actor1.age();
-                }
-            }));
-    };
-
-
-    const cardColumns = actors.map((actor, index) => {
-        if (actor.lname.includes(filter) || actor.fname.includes(filter)) {
-            return (
-                <Col key={index} xs={12} md={6} lg={3}>
-                    <ActorCard actor={actor} />
-                </Col>
-            )
+    filterdActors.sort((actor1, actor2) => {
+        if (sortBy === 'lname') {
+            if (actor1.lname.toLowerCase() < actor2.lname.toLowerCase()) {
+                return -1
+            } else if (actor1.lname.toLowerCase() > actor2.lname.toLowerCase()) {
+                return 1
+            } else {
+                return 0
+            };
+        } else if (sortBy === 'fname') {
+            if (actor1.fname.toLowerCase() < actor2.fname.toLowerCase()) {
+                return -1
+            } else if (actor1.fname.toLowerCase() > actor2.fname.toLowerCase()) {
+                return 1
+            } else {
+                return 0
+            };
+        } else if (sortBy === 'age') {
+            return actor2.age() - actor1.age();
         }
     });
+
+    const cardColumns = filterdActors.map((actor, index) => {
+        return (
+            <Col key={index} xs={12} md={6} lg={3}>
+                <ActorCard actor={actor} />
+            </Col>
+        )
+    }
+    );
 
     return (
         <div className="p-actor">
@@ -72,7 +67,7 @@ const ActorsPage = () => {
                 <Row>
                     <Col xs={12} md="auto">
                         <label htmlFor="sort-type-select" className="mr-1">Sort by:</label>
-                        <select id="sort-type-select" value={sortBy} onChange={sortActors} className="mb-3">
+                        <select id="sort-type-select" value={sortBy} onChange={e => {setSortBy(e.target.value)}} className="mb-3">
                             <option value="lname">Last Name</option>
                             <option value="fname">First Name</option>
                             <option value="age">Age (z-a)</option>
