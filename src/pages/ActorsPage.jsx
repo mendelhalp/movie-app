@@ -21,8 +21,7 @@ actorsArr.push(new Actor("Sacha", "Baron Cohen", "1971-10-13", "https://m.media-
 actorsArr.push(new Actor("Linda", "Hunt", "1945-04-02", "https://m.media-amazon.com/images/M/MV5BMTM0NDg4MzMzNV5BMl5BanBnXkFtZTcwOTUwMTc4Mg@@._V1_UY317_CR14,0,214,317_AL_.jpg", "https://www.imdb.com/name/nm0001373/"));
 
 const ActorsPage = () => {
-    const [actors, setActors] = useState(actorsArr.sort((a1, a2) =>
-        (a1.lname.toLowerCase() < a2.lname.toLowerCase()) ? -1 : (a1.lname.toLowerCase() > a2.lname.toLowerCase()) ? 1 : 0));
+    const [actors, setActors] = useState(actorsArr);
     const [filter, setFilter] = useState('');
     const [sortBy, setSortBy] = useState("lname");
 
