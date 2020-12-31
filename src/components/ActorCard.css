@@ -1,12 +1,12 @@
-div.card{
+.c-actor-card .card{
     box-shadow: 1px 1px 9px -5px #000;
-
 }
-div.card a{
+
+.c-actor-card .card a{
     text-decoration: none;
     color: rgb(73, 73, 73);
 }
     
-div.card a:hover{
+.c-actor-card .card a:hover{
     color: rgb(173, 173, 173);
 }
