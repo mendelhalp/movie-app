@@ -2,7 +2,8 @@ import './ActorsPage.css';
 import Actor from '../model/ActorModel';
 import ActorCard from '../components/ActorCard';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
 let actorsArr = [];
@@ -21,9 +22,15 @@ actorsArr.push(new Actor("Sacha", "Baron Cohen", "1971-10-13", "https://m.media-
 actorsArr.push(new Actor("Linda", "Hunt", "1945-04-02", "https://m.media-amazon.com/images/M/MV5BMTM0NDg4MzMzNV5BMl5BanBnXkFtZTcwOTUwMTc4Mg@@._V1_UY317_CR14,0,214,317_AL_.jpg", "https://www.imdb.com/name/nm0001373/"));
 
 const ActorsPage = () => {
-    const [actors, setActors] = useState(actorsArr);
+    const [actors, setActors] = useState([]);
     const [filter, setFilter] = useState('');
     const [sortBy, setSortBy] = useState("lname");
+
+    useEffect(() => {
+        axios.get("Actors.json").then(res =>{
+            setActors(res.data.map(plainActor => new Actor(plainActor)));
+        });
+    },[]);
 
     const filterdActors = actors.filter(actor =>
         actor.lname.toLowerCase().includes(filter.toLowerCase()) || actor.fname.toLowerCase().includes(filter.toLowerCase()))
@@ -45,7 +52,9 @@ const ActorsPage = () => {
             } else {
                 return 0
             };
-        } else if (sortBy === 'age') {
+        } else if (sortBy === 'age a-z') {
+            return actor1.age() - actor2.age();
+        } else if (sortBy === 'age z-a') {
             return actor2.age() - actor1.age();
         }
     });
@@ -69,7 +78,8 @@ const ActorsPage = () => {
                         <select id="sort-type-select" value={sortBy} onChange={e => {setSortBy(e.target.value)}} className="mb-3">
                             <option value="lname">Last Name</option>
                             <option value="fname">First Name</option>
-                            <option value="age">Age (z-a)</option>
+                            <option value="age z-a">Age (z-a)</option>
+                            <option value="age a-z">Age (a-z)</option>
                         </select>
                     </Col>
                     <Col xs={12} md="auto">

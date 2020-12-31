@@ -1,0 +1,86 @@
+[
+    {
+        "fname": "Marcel",
+        "lname": "Dalio",
+        "bday": "1900-07-17",
+        "img": "https://m.media-amazon.com/images/M/MV5BMjIyODk3OTIyOF5BMl5BanBnXkFtZTcwNDMwMjgwOA@@._V1_UY317_CR19,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0197950/?ref_=tt_cl_t3"
+    },
+    {
+        "fname": "Louis",
+        "lname": "de Funès",
+        "bday": "1914-07-31",
+        "img": "https://m.media-amazon.com/images/M/MV5BNDc5NTkyMDU4Nl5BMl5BanBnXkFtZTgwNzk0NTM1NTE@._V1_UY317_CR126,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0000086/?ref_=tt_cl_t1"
+    },
+    {
+        "fname": "Suzy",
+        "lname": "Delair",
+        "bday": "1917-12-31",
+        "img": "https://m.media-amazon.com/images/M/MV5BMTQ0MjgwMjEyMV5BMl5BanBnXkFtZTgwMjExNDc3NTE@._V1_UY317_CR132,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0216177/?ref_=tt_cl_t2"
+    },
+    {
+        "fname": "Janet",
+        "lname": "Brandt",
+        "bday": "1914-12-13",
+        "img": "https://m.media-amazon.com/images/M/MV5BZGJkOWQyY2MtOGQ4Mi00MjY0LTkwM2EtNWMwMTEzYzg4YTFkXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_UY317_CR9,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0104935/?ref_=tt_cl_t6"
+    },
+    {
+        "fname": "Morgan",
+        "lname": "Freeman",
+        "bday": "1937-06-01",
+        "img": "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2OF5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_UX214_CR0,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0000151/"
+    },
+    {
+        "fname": "Gary",
+        "lname": "Oldman",
+        "bday": "1958-03-21",
+        "img": "https://m.media-amazon.com/images/M/MV5BMTc3NTM4MzQ5MV5BMl5BanBnXkFtZTcwOTE4MDczNw@@._V1_UY317_CR0,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0000198/"
+    },
+    {
+        "fname": "Charles",
+        "lname": "Chaplin",
+        "bday": "1889-04-16",
+        "img": "https://m.media-amazon.com/images/M/MV5BNDcwMDc0ODAzOF5BMl5BanBnXkFtZTgwNTY2OTI1MDE@._V1_UX214_CR0,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0000122/"
+    },
+    {
+        "fname": "Shaun",
+        "lname": "Toub",
+        "bday": "1963-01-01",
+        "img": "https://m.media-amazon.com/images/M/MV5BZjVmYTE0ZmItYzZhMC00OTA2LWIxYWEtYjQ4NGQ2OTQyZGY2XkEyXkFqcGdeQXVyMTE2MzE4NzQ@._V1_UY317_CR20,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0869467/?ref_=tt_cl_t2"
+    },
+    {
+        "fname": "Navid",
+        "lname": "Negahban",
+        "bday": "1968-06-02",
+        "img": "https://m.media-amazon.com/images/M/MV5BZGEwM2VmYzItYjlhMC00YzRjLTgxOGYtZTdiMWY2YjkyNjI3XkEyXkFqcGdeQXVyMTQzMDU3Nw@@._V1_UY317_CR8,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm1041023/?ref_=tt_cl_t5"
+    },
+    {
+        "fname": "Adam",
+        "lname": "Sandler",
+        "bday": "1966-09-09",
+        "img": "https://m.media-amazon.com/images/M/MV5BMjQyNzM2MjM1Ml5BMl5BanBnXkFtZTcwMDE5NjI3Mg@@._V1_UY317_CR7,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0001191/?ref_=fn_al_nm_1"
+    },
+    {
+        "fname": "Sacha",
+        "lname": "Baron Cohen",
+        "bday": "1971-10-13",
+        "img": "https://m.media-amazon.com/images/M/MV5BMTkzMTY4Nzc2NF5BMl5BanBnXkFtZTgwODc3MDI2MDE@._V1_UY317_CR11,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0056187/?ref_=tt_cl_t1"
+    },
+    {
+        "fname": "Linda",
+        "lname": "Hunt",
+        "bday": "1945-04-02",
+        "img": "https://m.media-amazon.com/images/M/MV5BMTM0NDg4MzMzNV5BMl5BanBnXkFtZTcwOTUwMTc4Mg@@._V1_UY317_CR14,0,214,317_AL_.jpg",
+        "link": "https://www.imdb.com/name/nm0001373/"
+    }
+]

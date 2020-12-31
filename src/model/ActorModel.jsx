@@ -1,11 +1,19 @@
 class Actor {
-    
-    constructor(fname, lname, bday, img, link){
-        this.fname = fname;
-        this.lname = lname;
-        this.bday = new Date(bday);
-        this.img = img;
-        this.link = link;
+
+    constructor(plainActorOrfname, lname, bday, img, link) {
+        if (typeof plainActorOrfname === "object") {
+            this.fname = plainActorOrfname.fname;
+            this.lname = plainActorOrfname.lname;
+            this.bday = new Date(plainActorOrfname.bday);
+            this.img = plainActorOrfname.img;
+            this.link = plainActorOrfname.link;
+        } else {
+            this.fname = plainActorOrfname;
+            this.lname = lname;
+            this.bday = new Date(bday);
+            this.img = img;
+            this.link = link;
+        }
     }
 
     age() {
