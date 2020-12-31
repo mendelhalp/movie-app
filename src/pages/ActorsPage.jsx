@@ -1,9 +1,9 @@
 import './ActorsPage.css';
-import Actor from '../model/ActorModel';
 import ActorCard from '../components/ActorCard';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import ActorModel from '../model/ActorModel';
 
 const ActorsPage = () => {
     const [actors, setActors] = useState([]);
@@ -12,7 +12,7 @@ const ActorsPage = () => {
 
     useEffect(() => {
         axios.get("Actors.json").then(res =>{
-            setActors(res.data.map(plainActor => new Actor(plainActor)));
+            setActors(res.data.map(plainActor => new ActorModel(plainActor)));
         });
     },[]);
 

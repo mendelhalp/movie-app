@@ -1,14 +1,14 @@
-class Actor {
+class ActorModel {
 
-    constructor(plainActorOrfname, lname, bday, img, link) {
-        if (typeof plainActorOrfname === "object") {
-            this.fname = plainActorOrfname.fname;
-            this.lname = plainActorOrfname.lname;
-            this.bday = new Date(plainActorOrfname.bday);
-            this.img = plainActorOrfname.img;
-            this.link = plainActorOrfname.link;
+    constructor(plainActorOrFname, lname, bday, img, link) {
+        if (typeof plainActorOrFname === "object") {
+            this.fname = plainActorOrFname.fname;
+            this.lname = plainActorOrFname.lname;
+            this.bday = new Date(plainActorOrFname.bday);
+            this.img = plainActorOrFname.img;
+            this.link = plainActorOrFname.link;
         } else {
-            this.fname = plainActorOrfname;
+            this.fname = plainActorOrFname;
             this.lname = lname;
             this.bday = new Date(bday);
             this.img = img;
@@ -22,4 +22,4 @@ class Actor {
     }
 }
 
-export default Actor;
+export default ActorModel;
