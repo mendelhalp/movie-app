@@ -1,3 +1,17 @@
 .c-movie-card .card{
     box-shadow: 1px 1px 9px -5px #000;
 }
+
+.c-movie-card .name-text{
+    font-size: 36px;
+}
+.c-movie-card .length-text{
+
+}
+.c-movie-card .directors-text{
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.c-movie-card .stars-text{
+    font-size: 16px;
+}
