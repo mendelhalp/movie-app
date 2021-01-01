@@ -1,0 +1,142 @@
+[
+    {
+        "name":"The Good Doctor",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/6tfT03sGp9k4c0J3dypjrI8TSAI.jpg",
+        "director":"Allison Liddi-Brown",
+        "lnegth":"42m",
+        "stars":"Freddie Highmore, Antonia Thomas, Hill Harper"
+    },
+    {
+        "name":"30 Coins",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/b2i9aaV6ncULl9jYXEoPi7VFJg8.jpg",
+        "director":"Jorge Guerricaechevarría",
+        "lnegth":"1h 3m",
+        "stars":"Eduard Fernández, Macarena Gómez, Miguel Ángel Silvestre"
+    },
+    {
+        "name":"SEAL Team",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/uTSLeQTeHevt4fplegmQ6bOnE0Z.jpg",
+        "director":"Alexis Ostrander",
+        "length":"43m",
+        "stars":"David Boreanaz, Max Thieriot, Neil Brown Jr."
+    },
+    {
+        "name":"The Simpsons",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/2IWouZK4gkgHhJa3oyYuSWfSqbG.jpg",
+        "director":"Bob Anderson",
+        "length":"22m",
+        "stars":"Dan Castellaneta, Julie Kavner, Nancy Cartwright"
+    },
+    {
+        "name":"Jujutsu Kaisen",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/g1rK2nRXSidcMwNliWDIroWWGTn.jpg",
+        "director":"Seong-hoo Park",
+        "length":"24m",
+        "stars":"Asami Seto, Junya Enoki, Yuuma Uchida"
+    },
+    {
+        "name":"Chicago Fire",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/6AccYL0eb7uzHn98IKaNjvJbyuA.jpg",
+        "director":"Alex Chapple",
+        "length":"1h",
+        "stars":"Jesse Spencer, Taylor Kinney, David Eigenberg"
+    },
+    {
+        "name":"Física o química: El reencuentro",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/k7YdhfvoCn0BB5eOLvvqG7lFWv1.jpg",
+        "director":"Marta Petite",
+        "length":"50m",
+        "stars":"Andrea Duro, Maxi Iglesias, Adam Jezierski"
+    },
+    {
+        "name":"Chicago Med",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/8mFhW6fJlapqq3cmQjxcG5h4KFa.jpg",
+        "director":"Ami Canaan Mann",
+        "length":"42m",
+        "stars":"Nick Gehlfuss, Yaya DaCosta, Torrey DeVitto"
+    },
+    {
+        "name":"NCIS",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/fi8EvaWtL5CvoielOjjVvTr7ux3.jpg",
+        "director":"Aaron Lipstadt",
+        "length":"45m",
+        "stars":"Mark Harmon, David McCallum, Sean Murray"
+    },
+    {
+        "name":"Coronation Street",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/xe6y8SJU0NyGEECu2LV9cXoY81g.jpg",
+        "director":"Abe Juckes",
+        "length":"30m",
+        "stars":"William Roache, Barbara Knox, Helen Worth"
+    },
+    {
+        "name":"The Adventure of Dai",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/i28TVlLozR09hqkGsSlu5wa1X2J.jpg",
+        "director":"Kazuya Karasawa",
+        "length":"24m",
+        "stars":"Yūki Kaji, Takehito Koyasu, Hiroshi Iwasaki"
+    },
+    {
+        "name":"Attack on Titan",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/lK0NAXT7mcJrC3NK8vpXwK5EJQu.jpg",
+        "director":"Aiko Sakuraba",
+        "length":"25m",
+        "stars":"Marina Inoue, Yūki Kaji, Yui Ishikawa"
+    },
+    {
+        "name":"Star Trek: Discovery",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/98RYSYsRNKWgrAAFBn0WfploUG7.jpg",
+        "director":"Akiva Goldsman",
+        "length":"1h",
+        "stars":"Sonequa Martin-Green, Doug Jones, Mary Wiseman"
+    },
+    {
+        "name":"This Is Us",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/bPaVOvW2LK6oYrRv9Ybb196ywub.jpg",
+        "director":"Anne Fletcher",
+        "length":"43m",
+        "stars":"Milo Ventimiglia, Mandy Moore, Sterling K. Brown"
+    },
+    {
+        "name":"Young Sheldon",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/aESxB2HblKlDzma39xVefa20pbW.jpg",
+        "director":"Chris Koch",
+        "length":"22m",
+        "stars":"Iain Armitage, Zoe Perry, Lance Barber"
+    },
+    {
+        "name":"Imperio De Mentiras",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/5adCPn5cthQcTN1q1e45gYD6v3Z.jpg",
+        "director":"Alejandro Camacho",
+        "length":"50m",
+        "stars":"Angelique Boyer, Andrés Palacios, Leticia Calderón"
+    },
+    {
+        "name":"Pokémon",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/rOuGm07PxBhEsK9TaGPRQVJQm1X.jpg",
+        "director":"Masamitsu Hidaka",
+        "length":"23m",
+        "stars":"Unsho Ishizuka, Rica Matsumoto, Ikue Otani"
+    },
+    {
+        "name":"Digimon Adventure:",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/7Qspx2eFX0uBSQLLlAKnYrjZgse.jpg",
+        "director":"Masato Mitsuka",
+        "length":"23m",
+        "stars":"Yūko Sanpei, Chika Sakamoto, Daisuke Namikawa"
+    },
+    {
+        "name":"The Expanse",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/5vQlVWkIMPhZ88OWchJsgwGEK9.jpg",
+        "director":"Breck Eisner",
+        "length":"43m",
+        "stars":"Steven Strait, Cas Anvar, Dominique Tipper"
+    },
+    {
+        "name":"Tehran",
+        "poster":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/ornJAVPHRPNGLfNppnqS6sfjAUB.jpg",
+        "director":"Daniel Syrkin",
+        "length":"50m",
+        "stars":"Niv Sultan, Shaun Toub, Navid Negahban"
+    }
+]
