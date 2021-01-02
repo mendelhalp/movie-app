@@ -29,7 +29,7 @@ const MoviesPage = () => {
     //                     for (let i = 0; i < res2.data.cast.length && i < 3; i++) {
     //                         stars = stars+`${res2.data.cast[i].name} `;
     //                     }
-    //                     console.log(`${movie.titl} "" ${movie.poster_path} ${director} ${stars}`);
+    //                     console.log(`${movie.title} "" ${movie.poster_path} ${director} ${stars}`);
     //                     return new MovieModel(movie.titl, '', movie.poster_path, director, stars);
     //                 });
     //             }));
