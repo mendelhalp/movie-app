@@ -26,24 +26,30 @@ const MoviesPage = () => {
     }
 
     const addMovie = (index) => {
-        axios.get("https://api.themoviedb.org/3/movie/" + results[index].id + "/credits?api_key=36c4094b604576f2d3efff6e899c1578").then(res => {
+        let credits = axios.get("https://api.themoviedb.org/3/movie/" + results[index].id + "/credits?api_key=36c4094b604576f2d3efff6e899c1578");
+        let info = axios.get("https://api.themoviedb.org/3/movie/" + results[index].id + "?api_key=36c4094b604576f2d3efff6e899c1578");
+        Promise.all([credits, info]).then(responses => {
             let director;
             let stars = '';
-            for (let i = 0; i < res.data.crew.length; i++) {
-                if (res.data.crew[i].job === 'Director') {
-                    director = res.data.crew[i].name;
-                    i = res.data.crew.length - 1;
+
+            let credits = responses[0].data;
+            let info = responses[1].data;
+
+            for (let i = 0; i < credits.crew.length; i++) {
+                if (credits.crew[i].job === 'Director') {
+                    director = credits.crew[i].name;
+                    i = credits.crew.length - 1;
                 }
             }
-            for (let i = 0; i < res.data.cast.length && i < 3; i++) {
+            for (let i = 0; i < credits.cast.length && i < 3; i++) {
                 if (i === 2) {
-                    stars += (`${res.data.cast[i].name}`);
+                    stars += (`${credits.cast[i].name}`);
                 } else {
-                    stars += (`${res.data.cast[i].name}, `);
+                    stars += (`${credits.cast[i].name}, `);
                 }
             }
-            console.log(`${results[index].title} ${results[index].poster_path} "" ${director} ${stars}`);
-            setMovies(movies.concat(new MovieModel(results[index].title, results[index].poster_path, '', director, stars)));
+            console.log(`${info.title} ${info.poster_path} ${info.runtime} ${director} ${stars}`);
+            setMovies(movies.concat(new MovieModel(info.title, info.poster_path, info.runtime, director, stars)));
         });
         setSearchValue('');
         setResults('');
