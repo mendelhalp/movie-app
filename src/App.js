@@ -4,7 +4,6 @@ import './App.css';
 import ActorsPage from './pages/ActorsPage';
 import HomePage from './pages/HomePage';
 import MoviesPage from './pages/MoviesPage';
-import TmdbMoviesPage from './pages/tmdbMoviesPage';
 
 function App() {
   return (
@@ -28,7 +27,7 @@ function App() {
           <Route exact path="/"><HomePage /></Route>
           <Route exact path="/home"><HomePage /></Route>
           <Route exact path="/actors"><ActorsPage /></Route>
-          <Route exact path="/movies"><TmdbMoviesPage /></Route>
+          <Route exact path="/movies"><MoviesPage /></Route>
         </Switch>
       </HashRouter>
     </>

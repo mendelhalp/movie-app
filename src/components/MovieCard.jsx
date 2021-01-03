@@ -16,8 +16,8 @@ const MovieCard = ({ movie }) =>
                             <Card.Text className="length-text">{movie.length}</Card.Text>
                         </div>
                         <div className="">
-                            <Card.Text className="directors-text">Director: {movie.director}</Card.Text>
-                            <Card.Text className="stars-text">Main stars: {movie.stars}</Card.Text>
+                            <Card.Text className="directors-text"><span className="font-weight-bold">Director:</span> {movie.director}</Card.Text>
+                            <Card.Text className="stars-text"><span className="font-weight-bold">Main stars:</span> {movie.stars}</Card.Text>
                         </div>
                     </Card.Body>
                 </Col>
