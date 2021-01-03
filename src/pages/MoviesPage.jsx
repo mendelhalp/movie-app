@@ -4,6 +4,7 @@ import MovieCard from '../components/MovieCard';
 import './MoviesPage.css';
 import axios from 'axios';
 import MovieModel from '../model/MovieModel';
+import getRuntime from '../utils/getRuntime';
 
 
 const MoviesPage = () => {
@@ -31,10 +32,12 @@ const MoviesPage = () => {
         Promise.all([credits, info]).then(responses => {
             let director;
             let stars = '';
-
+            
             let credits = responses[0].data;
             let info = responses[1].data;
-
+            
+            let runtime = getRuntime(info.runtime);
+            
             for (let i = 0; i < credits.crew.length; i++) {
                 if (credits.crew[i].job === 'Director') {
                     director = credits.crew[i].name;
@@ -48,8 +51,7 @@ const MoviesPage = () => {
                     stars += (`${credits.cast[i].name}, `);
                 }
             }
-            console.log(`${info.title} ${info.poster_path} ${info.runtime} ${director} ${stars}`);
-            setMovies(movies.concat(new MovieModel(info.title, info.poster_path, info.runtime, director, stars)));
+            setMovies(movies.concat(new MovieModel(info.title, info.poster_path, runtime, director, stars)));
         });
         setSearchValue('');
         setResults('');
